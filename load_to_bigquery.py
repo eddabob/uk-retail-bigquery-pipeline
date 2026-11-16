@@ -16,7 +16,8 @@ transactions = pd.DataFrame({
     "amount_gbp": [299.99, 45.00, 89.50, 32.00, 110.00]
 })
 
-table_id = f"{PROJECT_ID}.retail_analytics.raw_transactions" #raw_transactions is the Table ID, retail_analytics is the Dataset ID
+table_id = f"{PROJECT_ID}.retail_analytics.raw_transactions"
+ #raw_transactions is the Table ID, retail_analytics is the Dataset ID (schema)
 job_config = bigquery.LoadJobConfig(write_disposition="WRITE_TRUNCATE")
 job = client.load_table_from_dataframe(transactions, table_id, job_config=job_config)
 job.result()

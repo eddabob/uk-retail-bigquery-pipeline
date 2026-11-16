@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    columns:
+      - name: transaction_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_customer_rfm
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: lifetime_spend_gbp
+        tests:
+          - not_null
