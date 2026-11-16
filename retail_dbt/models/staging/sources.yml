@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw_retail
+    database: project-dd910318-76d8-49a1-acb
+    schema: retail_analytics
+    tables:
+      - name: raw_transactions
