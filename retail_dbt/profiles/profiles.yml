@@ -1,0 +1,11 @@
+retail_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: project-dd910318-76d8-49a1-acb
+      dataset: retail_analytics
+      location: europe-west2
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      threads: 2
